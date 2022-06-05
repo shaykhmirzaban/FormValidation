@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form validation Challenge Front-end Mentor</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- awesome icons link -->
+    <script
+      src="https://kit.fontawesome.com/87550c64f0.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="container">
@@ -28,20 +33,35 @@
           <div class="sub-col-2">
             <form action="">
               <div class="firs-name">
-                <input type="text" placeholder="First Name" class="Fname"/>
-                <p>First name is required</p>
+                <input type="text" placeholder="First Name" class="Fname" />
+                <p class="error">First name is not valid</p>
               </div>
               <div class="last-name">
-                <input type="text" placeholder="Last Name" class="Lname"/>
-                <p>Last name is required</p>
+                <input type="text" placeholder="Last Name" class="Lname" />
+                <p class="error">Last name is not valid</p>
               </div>
               <div class="email">
-                <input type="email" placeholder="Email Address" class="email"/>
-                <p>Email is required</p>
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  class="email1"
+                />
+                <p class="error">Looks like this is not an email</p>
               </div>
               <div class="password">
-                <input type="password" placeholder="Password" class="password"/>
-                <p>Password is required</p>
+                <div class="password-box">
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    class="password1"
+                    onkeyup="incre(this)"
+                  />
+                  <p class="error">Password is not valid</p>
+                  <div class="img">
+                    <!-- <i class="fa-solid fa-eye"></i> -->
+                    <i class="fa-solid fa-eye-slash"></i>
+                  </div>
+                </div>
               </div>
               <p>
                 Valid password contains 12 or more characters with a mix of
@@ -53,7 +73,7 @@
                 <p>Password length: <span class="PasswordLength">0</span></p>
               </div>
               <div class="button">
-                <button class="button">CLAIM YOUR FREE TRAIL</button>
+                <a class="button1">CLAIM YOUR FREE TRAIL</a>
                 <p>
                   By clicking the button, you are agreeing to our
                   <span style="color: #ff7a7a">Terms and Services</span>
@@ -66,8 +86,8 @@
 
       <div class="label">
         <p>
-          Challenge by <span style="color: #ff7a7a">Frontend Mentor</span> .
-          Coded by <span style="color: #ff7a7a">Shaykh Mirzaban.</span>
+          Challenge by <a href="https://www.frontendmentor.io/home" style="text-decoration: none; color: #ff7a7a">Frontend Mentor</a>.
+          Coded by <a href="https://shaykh-mirzaban-portfolio.web.app/" style="text-decoration: none; color: #ff7a7a">Shaykh Mirzaban.</a>
         </p>
       </div>
     </div>
