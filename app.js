@@ -26,17 +26,21 @@
   eye.addEventListener("click", eyeFunction);
   button.addEventListener("click", checkField);
 
+  window.addEventListener("keypress", (e) => {
+    if (e.which === 13 && e.keyCode === 13) {
+      checkField();
+    }
+  });
+
   function firstNameCheck() {
     let FNvalue = firstName.value;
-    console.log(FNvalue);
-    console.log(FNvalue.length);
+
     if (FNvalue.length === 0 || !isNaN(FNvalue)) {
       firstName.style.border = "2px solid #f77777";
       firstName.style.color = "#ff7a7a";
 
       error.forEach((e) => {
         let element = e.previousElementSibling.className;
-
         if (element === "Fname") {
           e.style.display = "block";
         }
@@ -44,21 +48,23 @@
     } else {
       firstName.style.border = "1px solid #ccc";
       firstName.style.color = "#272d32";
+
       let dNone = firstName.nextElementSibling;
       dNone.style.display = "none";
+
       flag1 = true;
     }
   }
 
   function lastNameCheck() {
-    let FNvalue = lastName.value;
-    if (FNvalue.length === 0 || !isNaN(FNvalue)) {
+    let LNvalue = lastName.value;
+
+    if (LNvalue.length === 0 || !isNaN(LNvalue)) {
       lastName.style.border = "2px solid #f77777";
       lastName.style.color = "#ff7a7a";
 
       error.forEach((e) => {
         let element = e.previousElementSibling.className;
-
         if (element === "Lname") {
           e.style.display = "block";
         }
@@ -66,8 +72,10 @@
     } else {
       lastName.style.border = "1px solid #ccc";
       lastName.style.color = "#272d32";
+
       let dNone = lastName.nextElementSibling;
       dNone.style.display = "none";
+
       flag2 = true;
     }
   }
@@ -92,13 +100,15 @@
     } else {
       email.style.border = "1px solid #ccc";
       email.style.color = "#272d32";
-      flag3 = true;
+
       error.forEach((e) => {
         let EMerror = e.previousElementSibling.className;
         if (EMerror === "email1") {
           e.style.display = "none";
         }
       });
+
+      flag3 = true;
     }
   }
 
@@ -106,6 +116,7 @@
     if (eye.children[0].className === "fa-solid fa-eye-slash") {
       eye.children[0].display = "none";
       eye.innerHTML = '<i class="fa-solid fa-eye"></i>';
+
       myFunction();
     } else {
       eye.innerHTML = '<i class="fa-solid fa-eye-slash"></i>';
@@ -123,12 +134,10 @@
 
   function passwordCheck() {
     let passwordValue = password.value;
-
     let regularExpression =
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!#^%*?&])[A-Za-z\d@$!#^%*?&]{12,}$/;
 
     if (regularExpression.test(passwordValue)) {
-      flag4 = true;
       password.style.border = "1px solid #ccc";
       password.style.borderRight = "none";
       password.style.color = "#272d32";
@@ -137,11 +146,12 @@
 
       error.forEach((e) => {
         let PWerror = e.previousElementSibling.className;
-
         if (PWerror === "password1") {
           e.style.display = "none";
         }
       });
+
+      flag4 = true;
     } else {
       password.style.border = "2px solid #f77777";
       password.style.borderRight = "none";
@@ -151,7 +161,6 @@
 
       error.forEach((e) => {
         let PWerror = e.previousElementSibling.className;
-
         if (PWerror === "password1") {
           e.style.display = "block";
         }

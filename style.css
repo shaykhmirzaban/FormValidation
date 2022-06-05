@@ -137,7 +137,6 @@ form p {
   bottom: -1.5em;
   right: 0em;
 }
-
 .sub-col-2 .bottom-content {
   width: 100%;
   display: flex;
@@ -183,7 +182,6 @@ form p {
   font-size: 0.9em;
   color: rgb(145, 148, 157);
 }
-
 .label {
   width: 500px;
   height: 100px;
@@ -225,6 +223,7 @@ form p {
   border-right: none;
 }
 
+
 @media screen and (max-width: 1050px) {
   .row {
     flex-direction: column;
@@ -234,7 +233,6 @@ form p {
     width: 100%;
   }
 }
-
 @media screen and (max-width: 800px) {
   .col-1 h1 {
     font-size: 2.5em;
