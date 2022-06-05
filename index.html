@@ -28,19 +28,19 @@
           <div class="sub-col-2">
             <form action="">
               <div class="firs-name">
-                <input type="text" placeholder="First Name" />
+                <input type="text" placeholder="First Name" class="Fname"/>
                 <p>First name is required</p>
               </div>
               <div class="last-name">
-                <input type="text" placeholder="Last Name" />
+                <input type="text" placeholder="Last Name" class="Lname"/>
                 <p>Last name is required</p>
               </div>
               <div class="email">
-                <input type="email" placeholder="Email Address" />
+                <input type="email" placeholder="Email Address" class="email"/>
                 <p>Email is required</p>
               </div>
               <div class="password">
-                <input type="password" placeholder="Password" />
+                <input type="password" placeholder="Password" class="password"/>
                 <p>Password is required</p>
               </div>
               <p>
@@ -50,10 +50,10 @@
             </form>
             <div class="bottom-content">
               <div class="password-length">
-                <p>Password length: 0</p>
+                <p>Password length: <span class="PasswordLength">0</span></p>
               </div>
               <div class="button">
-                <button>CLAIM YOUR FREE TRAIL</button>
+                <button class="button">CLAIM YOUR FREE TRAIL</button>
                 <p>
                   By clicking the button, you are agreeing to our
                   <span style="color: #ff7a7a">Terms and Services</span>
@@ -71,5 +71,8 @@
         </p>
       </div>
     </div>
+
+    <!-- JS external file link -->
+    <script src="app.js"></script>
   </body>
 </html>
