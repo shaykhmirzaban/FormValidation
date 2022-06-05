@@ -117,9 +117,9 @@ form p {
 }
 .sub-col-2 form .firs-name input:focus,
 .last-name input:focus,
-.email input:focus{
-    outline: 3px dotted #333;
-    outline-offset: 5px;
+.email input:focus {
+  outline: 3px dotted #333;
+  outline-offset: 5px;
 }
 .sub-col-2 form .firs-name p,
 .last-name p,
@@ -131,11 +131,11 @@ form p {
   padding: 0.2em;
   display: none;
 }
-.password p{
-    display: none;
-    position: absolute;
-    bottom: -1.5em;
-    right: 0em;
+.password p {
+  display: none;
+  position: absolute;
+  bottom: -1.5em;
+  right: 0em;
 }
 
 .sub-col-2 .bottom-content {
@@ -271,8 +271,8 @@ form p {
     width: 100%;
     text-align: center;
   }
-  .img{
-      height: 50px;
+  .img {
+    height: 50px;
   }
 }
 @media screen and (max-width: 600px) {
